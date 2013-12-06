@@ -1,6 +1,11 @@
 *.class
-
-# Package Files #
 *.jar
 *.war
 *.ear
+*.log
+.DS_Store
+target/
+nbactions.xml
+.project
+.classpath
+.settings/
