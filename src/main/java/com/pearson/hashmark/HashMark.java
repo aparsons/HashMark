@@ -6,10 +6,10 @@ import java.util.List;
 
 public class HashMark {
     
-    private static int PASSWORDS_PER_TEST = 1000;
+    private static int PASSWORDS_PER_TEST = 500;
     
     // BCrypt Config
-    private static int BCRYPT_MAX_LOG_ROUNDS = 12;
+    private static int BCRYPT_MAX_LOG_ROUNDS = 8;
     
     public static void main(String[] args){
         // Generate Credentials
