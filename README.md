@@ -1,0 +1,4 @@
+HashMark
+========
+
+Benchmarking Hashing Algorithms
