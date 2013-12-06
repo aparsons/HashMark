@@ -21,7 +21,7 @@ public final class BCryptScenario extends Scenario {
 
     private List<BCryptTest> generateTests(int maxLogRounds) {
         List<BCryptTest> generatedTests = new ArrayList<>(maxLogRounds);
-        for (int r = 4; r <= maxLogRounds; r++) {
+        for (int r = 2; r <= maxLogRounds; r++) {
             generatedTests.add(new BCryptTest("BCrypt LogRounds=" + r, r));
         }              
         return generatedTests;
