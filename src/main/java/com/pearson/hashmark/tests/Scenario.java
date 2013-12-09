@@ -1,6 +1,7 @@
 package com.pearson.hashmark.tests;
 
 import com.pearson.hashmark.Credential;
+import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.List;
 import org.slf4j.Logger;
@@ -23,7 +24,11 @@ public abstract class Scenario {
             LOG.info("Starting " + test.getDescription());
             Result result = new Result(test.getDescription());
             for (Credential credential : credentialsList) {
-                result.addTime(test.run(credential));
+                try {
+                    result.addTime(test.run(credential));
+                } catch (GeneralSecurityException gse) {
+                    LOG.warn(gse.getMessage());
+                }
             }
             resultsList.add(result);
         }
