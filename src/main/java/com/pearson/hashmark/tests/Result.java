@@ -29,11 +29,16 @@ public class Result {
         return timeStats.getN();
     }
     
+    public double getSum() {
+        return timeStats.getSum();
+    }
+    
     @Override
     public String toString() {
         return new ToStringBuilder(this)
                 .append("description", description)
-                .append("meanTime", getMeanTime())
+                .append("meanTime", getMeanTime()) // Millis
+                .append("sum", getSum())
                 .append("N", getN())
                 .toString();
     }

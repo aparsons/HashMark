@@ -7,12 +7,12 @@ import org.apache.commons.lang.RandomStringUtils;
 
 public class CredentialsFactory {
 
-    public static List<Credential> generate(int count) {
+    public static List<Credential> generate(int count, int minLength, int maxLength) {
         List<Credential> credentialsList = new ArrayList<>();
 
         Random random = new Random();
         for (int index = 0; index < count; index++) {
-            credentialsList.add(new Credential(RandomStringUtils.random(random.nextInt(20) + 5)));
+            credentialsList.add(new Credential(RandomStringUtils.random(random.nextInt(maxLength - minLength) + minLength, true, true)));
         }
         
         return credentialsList;
